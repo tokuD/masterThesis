@@ -1,75 +1,21 @@
-
 \documentclass[12pt,a4j]{jreport}
 \input{packages.tex}
-\begin{document}
-
-\thispagestyle{empty}
-
-\thispagestyle{empty}
-\clearpage
 \input{title.tex}
 
-%=====================================================================================
-\renewcommand{\abstractname}{要旨}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
 
-\begin{abstract}
-  研究の要旨。なんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんや
-\end{abstract}
-
-%=====================================================================================
+\input{abstract.tex}
 
 % 目次の表示
 \tableofcontents
+\listoffigures
+\listoftables
 
-%=====================================================================================
-\pagestyle{fancy}
-\lhead{\rightmark}
-\renewcommand{\chaptermark}[1]{\markboth{第\ \normalfont\thechapter\ 章~~#1}{}}
-%=====================================================================================
-
-\chapter{はじめに} %章
-\input{chapter1.tex}
-
-\section{研究背景} %1.1
-\subsection{---とは} %1.1.1
-\subsection{-----とは} %1.1.2
-
-\section{研究目的}
-
-\section{本論文の校正}
-
-
-\chapter{関連研究}
-
-\section{---に関する研究}
-\section{---に関する研究}
-
-\chapter{提案手法}
-\section{---}
-\subsection{---}
-\subsection{---}
-\section{---}
-\subsection{---}
-\subsection{---}
-
-\chapter{評価実験}
-\section{実験方法}
-\section{実験結果}
-\section{考察}
-
-\chapter{まとめ}
-研究のまとめ。なんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんやなんやかんや
-
-%=====================================================================================
-\chapter*{謝辞} %章を付けずにタイトル表示
-\addcontentsline{toc}{chapter}{謝辞} %章立てせずに目次に追加するおまじない
-本論文を作成するにあたり、---- みなさまに感謝の意を表します．
-
-%=====================================================================================
-
-\addcontentsline{toc}{chapter}{参考文献} %章立てせずに目次に追加するおまじない
-\renewcommand{\bibname}{参考文献} %これがないと，タイトルが「関連図書」になってしまう
-\bibliography{bibtexファイル名} %bibtexファイルの読み込み
-\bibliographystyle{junsrt} %本文に\cite{}を入れることで，参考文献表示
+\input{chapter1/main.tex}
+\input{chapter2/main.tex}
+\input{chapter3/main.tex}
+\input{chapter4/main.tex}
 
 \end{document}
