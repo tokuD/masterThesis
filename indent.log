@@ -1,7 +1,7 @@
 INFO:  latexindent.pl version 3.19.1, 2022-12-04, a script to indent .tex files
        latexindent.pl lives here: /usr/local/Cellar/latexindent/3.19.1/libexec/bin/
-       Mon Jan  9 19:06:54 2023
-       Filename: /Users/tokudamegumu/Latex/chapter1/__latexindent_temp_section2.tex
+       Tue Jan 10 18:37:56 2023
+       Filename: /Users/tokudamegumu/Latex/chapter2/__latexindent_temp_section1.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
