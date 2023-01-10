@@ -1,19 +1,24 @@
-\section{リングイメージングチェレンコフ検出器}
-
-\subsection{チェレンコフ放射}
+\section{チェレンコフ放射}
 チェレンコフ放射とは、荷電粒子が物質を通過する際に荷電粒子の速度がその物質中の光速を超えると光を発生することである。
 またその際の光をチェレンコフ光という。
-チェレンコフ光は図\ref{cherenkov}のように円錐状に発生する。
-この時、チェレンコフ角$\theta_{c}$は物質の屈折率$n$と荷電粒子の速度$\beta$を用いて次のように表せる。
-
+速度$\beta$の荷電粒子が屈折率$n$の物質中を通過する際に、チェレンコフ放射が発生する条件は$(\ref{eq:cherenkov_condition})$式で表せる。
 \begin{equation}
-  \label{cherenkov_angle}
+  \label{eq:cherenkov_condition}
+  \beta \ge \frac{1}{n}
+\end{equation}
+チェレンコフ光は図$\ref{fig:cherenkov}$のように円錐状に発生し、その際のチェレンコフ角$\theta_{c}$は$(\ref{eq:cherenkov_angle})$式のように表せる。
+\begin{equation}
+  \label{eq:cherenkov_angle}
   \cos \theta_{c} = \frac{1}{n\beta}
 \end{equation}
-
+また、単位長さの輻射体から発生するチェレンコフ光の光子数$dN/dx$は$(\ref{eq:cherenkov_light_yield})$式のように表される。
+\begin{equation}
+  \label{eq:cherenkov_light_yield}
+  \frac{dN}{dx} = 2 \pi z^2 \alpha \int{\left(1-\frac{1}{\beta^2 n^2}\right)\frac{d\lambda}{\lambda^2}}
+\end{equation}
+ここで、$z$は荷電粒子の電荷数、$\alpha$は微細構造定数、$\lambda$はチェレンコフ光の波長である。
 \begin{figure}[htbp]
-  \label{cherenkov}
   \centering
   \includegraphics[width=10cm]{images/chapter2/cherenkov.pdf}
-  \caption[チェレンコフ放射の模式図]{チェレンコフ放射の模式図。}
+  \caption[チェレンコフ放射の模式図]{チェレンコフ放射の模式図。}\label{fig:cherenkov}
 \end{figure}

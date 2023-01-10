@@ -12,8 +12,7 @@ $(\ref{eq:cherenkov_angle})$式から粒子の速度を求め、粒子識別を�
 今回は、リングイメージング型のチェレンコフ検出器についての研究を行った。
 
 \subsection{輻射体}
-チャームバリオン分光実験では、リングイメージング・チェレンコフ検出器で$2-16\space\si{\GeV / c}$の運動量領域での$\pi/K/p$の粒子識別が必要となる。
-
+$(\ref{eq:cherenkov_momentum_condition})$式
 \subsection{球面鏡}
 
 \subsection{光検出器}
