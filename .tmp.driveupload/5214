@@ -1,0 +1,45 @@
+\section{Geant4シミュレーションによるテスト実験の再現}
+製作したコーン型ライトガイドの集光性能を確認するため、Geant4シミュレーションによるプロトタイプ検出器の再現を行った。
+コーン型ライトガイドの集光性能を確認することで、実機のシミュレーションにおいてより正確なシミュレーションを行うことができる。
+
+\subsection{ジオメトリ}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm, page=1]{images/chapter5/ELPHsimulationSetup.pdf}
+  \caption{テスト実験再現用シミュレーションのセットアップ。上から見た図。}
+  \label{fig:ELPHsimulationSetup1}
+\end{figure}
+
+\subsection{エアロゲル}
+エアロゲルはサイズ、屈折率、透過長、吸収長、をパラメータとして考慮した。
+また、テスト実験で使用した3つのエアロゲルの個体差も考慮してパラメータの設定を行った。
+表に各エアロゲルのパラメータを示す。
+\begin{table}[htbp]
+\caption{使用したエアロゲルのパラメータ}
+\label{tabe:Aerogel}
+\centering
+\begin{tabular}{lll}
+  \hline
+  型番 & 屈折率 & 縦 (mm) & 横 (mm) & 厚さ (mm) & 400 nmにたいs透過長 (mm)
+\end{table}
+
+\subsection{球面鏡}
+
+\subsection*{MPPC}
+\subsection{コーン型ライトガイド}
+
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm, page=1]{images/chapter5/decideAl.pdf}
+  \caption{$\SI{50}{mm}$コーンの場合の、コーン反射面の反射率に対するMultiplicityの変化。赤のラインが実験値の値。反射率を0.675とすることで実験値を再現できる。}
+  \label{fig:decideAl_50}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=10cm, page=2]{images/chapter5/decideAl.pdf}
+  \caption{$\SI{30}{mm}$コーンの場合の、コーン反射面の反射率に対するMultiplicityの変化。赤のラインが実験値の値。反射率を0.67とすることで実験値を再現できる。}
+  \label{fig:decideAl_30}
+\end{figure}
