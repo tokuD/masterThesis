@@ -1,7 +1,7 @@
 \section{コーン型ライトガイドの深さ最適化}
 RICHでは光検出器としてMPPCを使用するが、MPPCは受光面の面積が小さく、チェレンコフ光はチェレンコフ光は発光量が少ないため、
 コーン型ライトガイドを用いて集光を行うことにした。
-今回のテスト実験では、セグメントサイズの違いによる分解能への影響を理解するために図\ref{fig:cone}の様な
+今回のテスト実験では、セグメントサイズの違いによる分解能への影響を理解するため
 2種類のコーン型ライトガイドを製作した。\\
 先行研究からセグメントサイズは50 mm以下が要求されているので、入口直径は50 mmと、それより小さい30 mmのコーンを検討した。
 MPPCを取り付けるため、出口直径はどちらもMPPCの対角線の長さと同じ8.5 mmとした。
@@ -21,7 +21,7 @@ MPPCを取り付けるため、出口直径はどちらもMPPCの対角線の長
   \centering
   \includegraphics[width=10cm]{images/chapter3/cone_optimize.pdf}
   \caption{Geant4シミュレーションの模式図。コーンの深さを変えながら収率を確認した。}
-  \label{fig:cone_optimize}
+  \label{fig:cone_optimize_image}
 \end{figure}
 
 \begin{figure}
@@ -37,18 +37,18 @@ MPPCを取り付けるため、出口直径はどちらもMPPCの対角線の長
     \begin{minipage}[t]{0.45\hsize}
       \centering
       \includegraphics[keepaspectratio, scale=0.3]{images/chapter3/cone50_optimize.pdf}
-      \caption{平行光が入射した場合の$\SI{50}{mm}$コーンの深さに対する収率。深さ$\SI{110}{mm}$でサチュレーションする。}
-      \label{fig:cone50_optimize}
+      [a]$\SI{50}{mm}$コーンの場合
     \end{minipage} &
     %---- 2番目の図 --------------------------
     \begin{minipage}[t]{0.45\hsize}
       \centering
       \includegraphics[keepaspectratio, scale=0.3]{images/chapter3/cone30_optimize.pdf}
-      \caption{平行光が入射した場合の$\SI{30}{mm}$コーンの深さに対する収率。深さ$\SI{31}{mm}$でサチュレーションする。}
-      \label{fig:cone30_optimize}
+      [b]$\SI{30}{mm}$コーンの場合
     \end{minipage}
     %---- 図はここまで ----------------------
   \end{tabular}
+  \caption{平行光が入射した場合のコーンの深さに対する収率。}
+  \label{fig:cone_optimize}
 \end{figure}
 \noindent50 mmコーンは110 mm, 30 mmコーンは31 mmで収率がサチュレーションすることが分かった。\\\indent
 
@@ -73,16 +73,17 @@ $\SI{50}{mm}$コーンは深さ$\SI{120}{mm}$、$\SI{50}{mm}$コーンは深さ$
     \begin{minipage}[t]{0.45\hsize}
       \centering
       \includegraphics[keepaspectratio, scale=0.3]{images/chapter3/cone50_optimize2.pdf}
-      \caption{$\SI{50}{mm}$コーンの光子の入射角度に対する収率。}
+      [b]$\SI{50}{mm}$コーンの場合
       \label{fig:cone50_optimize2}
     \end{minipage} &
     %---- 2番目の図 --------------------------
     \begin{minipage}[t]{0.45\hsize}
       \centering
       \includegraphics[keepaspectratio, scale=0.3]{images/chapter3/cone30_optimize2.pdf}
-      \caption{$\SI{30}{mm}$コーンの光子の入射角度に対する収率。}
+      [b]$\SI{30}{mm}$コーンの場合
       \label{fig:cone30_optimize2}
     \end{minipage}
     %---- 図はここまで ----------------------
   \end{tabular}
+  \caption{光子が斜めに入射した場合の収率。}
 \end{figure}

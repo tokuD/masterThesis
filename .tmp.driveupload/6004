@@ -1,0 +1,20 @@
+\section{Geant4シミュレーションによる実機シミュレーション}
+実機では2$-$16\space$\si{GeV/c}$の$\pi$/K/pの識別が必要となるため、
+実際に$\pi$、K、pを入射させ、識別効率の確認を行った。
+ただし、今回は輻射体としてガスを用いたテスト実験は行なっていないため、エアロゲルのみを用いたシミュレーションを行った。
+エアロゲルでは、2$-$6\space$\si{GeV/c}$の$\pi$/k、2$-$10\space$\si{GeV/c}$のK/pを識別する必要があるため、
+この範囲での識別性能を確認した。
+
+\subsection{ジオメトリ}
+図\ref{fig:ActualSimulationSetup}に実機シミュレーションのジオメトリの概略図を示す。
+球面鏡、検出面の角度は設計値の$10\circ$、$20\circ$に設定した。
+球面鏡は曲率半径$\SI{3000}{mm}$とし
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/chapter4/ActualSimulationSetup.pdf}
+  \caption{
+    実機シミュレーションジオメトリの概略図。
+  }
+  \label{fig:ActualSimulationSetup}
+\end{figure}
