@@ -27,7 +27,7 @@ $\SI{30}{mm}$コーンを使用する検出面ではチェレンコフリング1
       \centering
       \includegraphics[keepaspectratio, scale=0.35, page=1]{images/chapter3/DetectorPlane.pdf}
     \end{minipage}
-     &
+    &
     \begin{minipage}[t]{0.45\hsize}
       \centering
       \includegraphics[keepaspectratio, scale=0.35, page=2]{images/chapter3/DetectorPlane.pdf}
@@ -42,9 +42,23 @@ $\SI{30}{mm}$コーンを使用する検出面ではチェレンコフリング1
 \subsection{MPPC}
 使用したMPPCの型番はS13360-6075CSで、
 $\SI{50}{mm}$コーンの場合は216個、$\SI{30}{mm}$コーンの場合は中心の7個を含めて223個を使用した。
-MPPCは降伏電圧($V_{BR}$)に個体差があるため、$V_{BR}$の順にグループ分けし、グループ毎に基盤に繋ぎ電圧をかけた。
+使用したMPPCの基本情報を表に示す。
+\begin{tabular}{ccccccc}
+  型番 & ピクセルピッチ $(\si{um})$ & 受光面サイズ $(\si{mm})$ & ピクセル数 & 開口率 (\%) & 窓材 & 窓材屈折率\\
+  \hline
+  \hline
+  S13360-6075CS & 75 & $6.0 \times 6.0$ & 6400 & 82 & シリコーン樹脂 & 1.41
+  \label{tab:MPPC}
+\end{tabular}
+MPPCは信号が出始める閾値となる降伏電圧$(\rm{V_{br}})$が存在し、
+\ref{eq:Vov}に示す、実際に印加する電圧$(\rm{V_{op}})$と降伏電圧との差である$(\rm{V_{ov}})$を基準として使用する。
+\begin{equation}
+  \rm{V_{ov}} = \rm{V_{op}} - \rm{V_{br}}
+  \label{eq:Vov}
+\end{equation}
+降伏電圧には個体差があるため、降伏電圧の順にグループ分けし、グループ毎に基盤に繋ぎ電圧をかけた。
 MPPCのTDC情報とQDC情報は、トリガーに使用したものも含めてNIM-EASIROCモジュール\cite{ref9}を用いて取得した。
-外部電圧は降伏電圧が最大となるグループを基準に設定し、EASIROC内部でグループ毎のゲインが揃うように調節した。
+外部電圧は降伏電圧が最大となるグループを基準に目的の$\rm{V_{ov}}$に設定し、EASIROC内部でグループ毎のゲインが揃うように調節した。
 NIM-EASIROCによるMPPC信号の閾値はグループ毎、電圧毎に調整し、$\SI{0.5}{p.e.}$の高さになるように設定した。
 
 
